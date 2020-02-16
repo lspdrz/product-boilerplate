@@ -3,6 +3,7 @@ import { Flex, Box } from "rebass";
 import { PrimaryButton } from "@nice-boys/components";
 import { GetViewerComponent } from "../graphql/queries/getViewer.generated";
 import Heading from "../components/Heading";
+import Home from "../components/Home";
 
 export default () => {
   return (
@@ -23,9 +24,9 @@ export default () => {
                   </Box>
                 </Flex>
               ) : (
-                <Box>
-                  Please <a href="/api/auth/google">log in</a>.
-                </Box>
+                /* Implement an Error page here if 
+                you want to enforce user accounts */
+                <Home />
               )}
             </Flex>
           );
